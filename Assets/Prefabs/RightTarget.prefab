@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &194851776899407515
+--- !u!1 &6377941230023920772
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 194851776899407514}
-  - component: {fileID: 194851776899407513}
-  - component: {fileID: 194851776899407512}
+  - component: {fileID: 6377941230023920773}
+  - component: {fileID: 6377941230023920774}
+  - component: {fileID: 6377941230023920775}
   m_Layer: 0
-  m_Name: Target
+  m_Name: RightTarget
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &194851776899407514
+--- !u!4 &6377941230023920773
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194851776899407515}
+  m_GameObject: {fileID: 6377941230023920772}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.04, y: 0, z: -4.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,13 +32,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &194851776899407513
+--- !u!54 &6377941230023920774
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194851776899407515}
+  m_GameObject: {fileID: 6377941230023920772}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -48,13 +48,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!135 &194851776899407512
+--- !u!135 &6377941230023920775
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194851776899407515}
+  m_GameObject: {fileID: 6377941230023920772}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
