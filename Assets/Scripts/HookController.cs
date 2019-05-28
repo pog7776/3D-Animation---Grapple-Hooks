@@ -6,6 +6,7 @@ public class HookController : MonoBehaviour
 {
     public Transform target;
     public GameObject hook;
+    public Transform barrel;
     public float speed = 0.1f;
     public bool canFire = true;
     public bool reached = false;
@@ -29,7 +30,7 @@ public class HookController : MonoBehaviour
                 }
                 else if (!canFire && reached)
                 {
-                    dir = -(target.position - hook.transform.position).normalized;
+                    dir = (barrel.position - hook.transform.position).normalized;
                 }
             }
             hook.transform.position += dir * speed;
