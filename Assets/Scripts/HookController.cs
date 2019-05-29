@@ -4,57 +4,54 @@ using UnityEngine;
 
 public class HookController : MonoBehaviour
 {
-    public Transform target;
-    public GameObject hook;
     public float speed = 0.1f;
-    public bool canFire = true;
-    public bool reached = false;
-    public Vector3 dir;
-    public bool control = true;
+    public Transform barrel;
+    public Transform target;
+    public bool fired;
+    public bool reeling;
 
-    private void Awake()
+    public void Fire()
     {
-        dir = Vector3.zero;
+        if (!fired) {
+            fired = true;
+            StartCoroutine(FireHook());
+        }
     }
 
-    private void Update()
+    IEnumerator FireHook() {
+        while (fired) {
+            transform.position += (target.position - transform.position).normalized * speed;
+            yield return null;
+        }
+    }
+
+    public void Reel()
     {
-        if (control) {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                if (canFire && !reached)
-                {
-                    canFire = false;
-                    dir = (target.position - hook.transform.position).normalized;
-                }
-                else if (!canFire && reached)
-                {
-                    dir = -(target.position - hook.transform.position).normalized;
-                }
-            }
-            hook.transform.position += dir * speed;
+        if (!reeling) {
+            reeling = true;
+            StartCoroutine(ReelHook());
+        }
+    }
+
+    IEnumerator ReelHook() {
+        while (reeling) {
+            transform.position += (barrel.position - transform.position).normalized * speed;
+            yield return null;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (control) {
-            if (!canFire && !reached)
-            {
-                if (other.tag == "Target")
-                {
-                    reached = true;
-                    dir = Vector3.zero;
-                }
+        if (fired) {
+            if (other.tag == "Target") {
+                fired = false;
+                StopCoroutine(FireHook());
             }
-            if (!canFire && reached)
-            {
-                if (other.tag == "Barrel")
-                {
-                    canFire = true;
-                    reached = false;
-                    dir = Vector3.zero;
-                }
+        }
+        if (reeling) {
+            if (other.tag == "Barrel") {
+                reeling = false;
+                StopCoroutine(ReelHook());
             }
         }
     }
