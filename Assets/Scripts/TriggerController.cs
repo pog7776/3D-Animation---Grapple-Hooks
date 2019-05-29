@@ -13,17 +13,17 @@ public class TriggerController : MonoBehaviour
         {
             switch (command)
             {
-                case "AimRight":
+                case "AimRightArm":
                     james.RightArmAim(); break;
                 case "FireRight":
                     james.FireRightHook(); break;
-                case "AimLeft":
+                case "AimLeftArm":
                     james.LeftArmAim(); break;
                 case "FireLeft":
                     james.FireLeftHook(); break;
-                case "UnaimRight":
+                case "UnaimRightArm":
                     james.RightArmUnaim(); break;
-                case "UnaimLeft":
+                case "UnaimLeftArm":
                     james.LeftArmUnaim(); break;
                 case "ReelRight":
                     james.ReelRightHook(); break;
@@ -33,6 +33,14 @@ public class TriggerController : MonoBehaviour
                     james.Look(); break;
                 case "DontLook":
                     james.DontLook(); break;
+                case "AimRightLeg":
+                    james.RightLegAim(); break;
+                case "AimLeftLeg":
+                    james.LeftLegAim(); break;
+                case "UnaimRightLeg":
+                    james.RightLegUnaim(); break;
+                case "UnaimLeftLeg":
+                    james.LeftLegUnaim(); break;
                 default: break;
             }
         }
