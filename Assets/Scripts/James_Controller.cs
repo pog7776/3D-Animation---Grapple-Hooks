@@ -9,6 +9,8 @@ public class James_Controller : MonoBehaviour
     public GrapplingController rightHook;
     public GrapplingController leftHook;
     public IK_LookAt look;
+    public IK_RightLeg rightLeg;
+    public IK_LeftLeg leftLeg;
 
     public void RightArmAim() {
         rightArm.canIK = true;
@@ -52,5 +54,21 @@ public class James_Controller : MonoBehaviour
 
     public void DontLook() {
         look.canLook = false;
+    }
+
+    public void RightLegAim() {
+        rightLeg.canIK = true;
+    }
+
+    public void RightLegUnaim() {
+        rightLeg.canIK = false;
+    }
+
+    public void LeftLegAim() {
+        leftLeg.canIK = true;
+    }
+
+    public void LeftLegUnaim() {
+        leftLeg.canIK = false;
     }
 }

@@ -182,13 +182,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38dd0b34805ee71468d2366007c0a9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  hook: {fileID: 931637637125004369}
   speed: 0.1
-  canFire: 1
-  reached: 0
-  dir: {x: 0, y: 0, z: 0}
-  control: 1
+  barrel: {fileID: 1836436321}
+  target: {fileID: 194851776899407514, guid: e749eae4d4211bc4e80f5f646b3c39c2, type: 3}
+  fired: 0
+  reeling: 0
 --- !u!1 &931637637125004371
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canAim: 1
-  target: {fileID: 0}
+  target: {fileID: 194851776899407514, guid: e749eae4d4211bc4e80f5f646b3c39c2, type: 3}
 --- !u!1 &931637637125004373
 GameObject:
   m_ObjectHideFlags: 0
