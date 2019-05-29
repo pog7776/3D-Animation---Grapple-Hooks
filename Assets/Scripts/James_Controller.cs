@@ -11,6 +11,7 @@ public class James_Controller : MonoBehaviour
     public IK_LookAt look;
     public IK_RightLeg rightLeg;
     public IK_LeftLeg leftLeg;
+    public Rigidbody rb;
 
     public void RightArmAim() {
         rightArm.canIK = true;
@@ -70,5 +71,14 @@ public class James_Controller : MonoBehaviour
 
     public void LeftLegUnaim() {
         leftLeg.canIK = false;
+    }
+
+    public void Gravity() {
+        rb.useGravity = true;
+    }
+
+    public void NoGravity() {
+        rb.useGravity = false;
+        rb.velocity = Vector3.zero;
     }
 }

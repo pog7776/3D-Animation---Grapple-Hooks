@@ -41,6 +41,10 @@ public class TriggerController : MonoBehaviour
                     james.RightLegUnaim(); break;
                 case "UnaimLeftLeg":
                     james.LeftLegUnaim(); break;
+                case "GravityOn":
+                    james.Gravity(); break;
+                case "GravityOff":
+                    james.NoGravity(); break;
                 default: break;
             }
         }

@@ -9,6 +9,7 @@ public class HookController : MonoBehaviour
     public Transform target;
     public bool fired;
     public bool reeling;
+    public bool landed;
 
     public void Fire()
     {
@@ -29,6 +30,7 @@ public class HookController : MonoBehaviour
     {
         if (!reeling) {
             reeling = true;
+            landed = false;
             StartCoroutine(ReelHook());
         }
     }
@@ -46,6 +48,7 @@ public class HookController : MonoBehaviour
             if (other.tag == "Target") {
                 fired = false;
                 StopCoroutine(FireHook());
+                landed = true;
             }
         }
         if (reeling) {
@@ -53,6 +56,13 @@ public class HookController : MonoBehaviour
                 reeling = false;
                 StopCoroutine(ReelHook());
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (landed) {
+            transform.position = target.position;
         }
     }
 }
