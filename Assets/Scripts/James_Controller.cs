@@ -48,7 +48,7 @@ public class James_Controller : MonoBehaviour
     }
 
     public void LeftArmUnaim() {
-        leftArm.canIK = true;
+        leftArm.canIK = false;
         leftHook.NoAim();
     }
 
