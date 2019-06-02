@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class James_Controller : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class James_Controller : MonoBehaviour
     public IK_RightLeg rightLeg;
     public IK_LeftLeg leftLeg;
     public Rigidbody rb;
+    public PlayableDirector pd;
+    public PlayableAsset[] array;
 
     public void RightArmAim() {
         rightArm.canIK = true;
@@ -80,5 +83,34 @@ public class James_Controller : MonoBehaviour
     public void NoGravity() {
         rb.useGravity = false;
         rb.velocity = Vector3.zero;
+    }
+
+    public void PlayTimeLine(int index) {
+        pd.playableAsset = array[index];
+        pd.Play();
+    }
+
+    public void PauseTimeLine() {
+        pd.Pause();
+    }
+
+    public void ResumetimeLine() {
+        pd.Resume();
+    }
+
+    public void StopTimeLine() {
+        pd.Stop();
+    }
+
+    public Transform GetJames() {
+        return transform;
+    }
+
+    public Transform GetRightHook() {
+        return rightHook.GetHook();
+    }
+
+    public Transform GetLeftHook() {
+        return leftHook.GetHook();
     }
 }
