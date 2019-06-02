@@ -6837,6 +6837,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: regular_guy_1
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: f313b9f8edbba814898bb410e190a4c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: f313b9f8edbba814898bb410e190a4c0, type: 3}
       propertyPath: m_Controller
       value: 

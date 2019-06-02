@@ -19830,6 +19830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flying
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 79f99915110105d45abca87d128e9647, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 79f99915110105d45abca87d128e9647, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.302
