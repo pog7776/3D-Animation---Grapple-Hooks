@@ -6,7 +6,7 @@ public class JamesController : MonoBehaviour
 {
     private Animator anim;
     Rigidbody rb;
-    CapsuleCollider bodyCollider;
+    MeshCollider bodyCollider;
     [SerializeField] float relaxTime = 8;
 
     void Awake()
@@ -19,7 +19,7 @@ public class JamesController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bodyCollider = gameObject.GetComponent<CapsuleCollider>();
+        bodyCollider = gameObject.GetComponent<MeshCollider>();
         anim = gameObject.GetComponent<Animator>();
     }
 
