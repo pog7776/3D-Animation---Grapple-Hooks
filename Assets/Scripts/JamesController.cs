@@ -13,7 +13,7 @@ public class JamesController : MonoBehaviour
     private TimelineAsset timelineAsset;
     private AnimatorClipInfo[] clipInfo;
 
-    [SerializeField] private float waitTime = 1.15f;
+    [SerializeField] private float furnitureWait = 1.15f;
     [SerializeField] private GameObject chair;
     [SerializeField] private float chairForce = 50;
     [SerializeField] private GameObject table;
@@ -21,6 +21,9 @@ public class JamesController : MonoBehaviour
     private int cycle = 0;
     private Rigidbody chairRb;
     private Rigidbody tableRb;
+
+    [SerializeField] private GameObject window;
+    [SerializeField] private float windowWait = 4.15f;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +40,8 @@ public class JamesController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(SmackFurniture(waitTime));
+        StartCoroutine(SmackFurniture(furnitureWait));
+        StartCoroutine(BreakWindow(windowWait));
 
         
         //Debug.Log(playableDirector.playableAsset.name);
@@ -60,5 +64,10 @@ public class JamesController : MonoBehaviour
             tableRb.AddTorque(new Vector3(-tableForce, 0, 0));
         }
         cycle++;
+    }
+
+    private IEnumerator BreakWindow(float waitTime){
+        yield return new WaitForSeconds(waitTime);
+        window.GetComponent<Breakable>().BreakFunction();
     }
 }
