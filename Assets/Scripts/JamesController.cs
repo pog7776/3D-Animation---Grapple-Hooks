@@ -11,6 +11,7 @@ public class JamesController : MonoBehaviour
     MeshCollider bodyCollider;
     private PlayableDirector playableDirector;
     private TimelineAsset timelineAsset;
+    private AnimatorClipInfo[] clipInfo;
 
     [SerializeField] private GameObject chair;
     [SerializeField] private GameObject table;
@@ -27,6 +28,13 @@ public class JamesController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(timelineAsset.)
+        //Debug.Log(playableDirector.playableAsset.name);
+        //Debug.Log(anim.GetCurrentAnimatorClipInfo(0)[anim.GetCurrentAnimatorClipInfo(0).Length].clip);
+        clipInfo = anim.GetCurrentAnimatorClipInfo(0);
+        Debug.Log(clipInfo[0].clip);
+
+        if(playableDirector.playableAsset.name == "Get Up"){
+            chair.GetComponent<Rigidbody>().AddTorque(new Vector3(0, 0, 1));
+        }
     }
 }
