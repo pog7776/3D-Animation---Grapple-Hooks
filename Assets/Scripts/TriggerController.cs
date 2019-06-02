@@ -73,6 +73,8 @@ public class TriggerController : MonoBehaviour
                 james.NoGravity(); break;
             case "PlayFirstSwing":
                 james.PlayTimeLine(0); break;
+            case "PlayBirdHit":
+                james.PlayTimeLine(1); break;
             case "Pause":
                 james.PauseTimeLine(); break;
             case "Resume":
