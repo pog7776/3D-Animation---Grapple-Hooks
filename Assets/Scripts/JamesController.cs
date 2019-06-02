@@ -1,39 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 public class JamesController : MonoBehaviour
 {
     private Animator anim;
     Rigidbody rb;
     MeshCollider bodyCollider;
-    [SerializeField] float relaxTime = 8;
+    private PlayableDirector playableDirector;
+    private TimelineAsset timelineAsset;
 
-    void Awake()
-    {
-        //rb =  gameObject.GetComponent<Rigidbody>();
-        //rb.detectCollisions = true;
-        //rb.useGravity = false;
-    }
+    [SerializeField] private GameObject chair;
+    [SerializeField] private GameObject table;
 
     // Start is called before the first frame update
     void Start()
     {
         bodyCollider = gameObject.GetComponent<MeshCollider>();
         anim = gameObject.GetComponent<Animator>();
+        playableDirector = GetComponent<PlayableDirector>();
+        timelineAsset = (TimelineAsset) playableDirector.playableAsset;
     }
 
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(Relax(relaxTime));
-    }
-
-    private IEnumerator Relax(float time){
-        yield return new WaitForSeconds(time);
-        bodyCollider.enabled = true;
-        anim.SetBool("relaxing", false);
-        //rb.detectCollisions = true;
-        //rb.useGravity = true;
+        //if(timelineAsset.)
     }
 }
