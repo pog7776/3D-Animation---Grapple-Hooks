@@ -13,8 +13,14 @@ public class JamesController : MonoBehaviour
     private TimelineAsset timelineAsset;
     private AnimatorClipInfo[] clipInfo;
 
+    [SerializeField] private float waitTime = 1.15f;
     [SerializeField] private GameObject chair;
+    [SerializeField] private float chairForce = 50;
     [SerializeField] private GameObject table;
+    [SerializeField] private float tableForce = 60;
+    private int cycle = 0;
+    private Rigidbody chairRb;
+    private Rigidbody tableRb;
 
     // Start is called before the first frame update
     void Start()
@@ -23,18 +29,36 @@ public class JamesController : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         playableDirector = GetComponent<PlayableDirector>();
         timelineAsset = (TimelineAsset) playableDirector.playableAsset;
+
+        chairRb = chair.GetComponent<Rigidbody>();
+        tableRb = table.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        StartCoroutine(SmackFurniture(waitTime));
+
+        
         //Debug.Log(playableDirector.playableAsset.name);
         //Debug.Log(anim.GetCurrentAnimatorClipInfo(0)[anim.GetCurrentAnimatorClipInfo(0).Length].clip);
-        clipInfo = anim.GetCurrentAnimatorClipInfo(0);
-        Debug.Log(clipInfo[0].clip);
+        // clipInfo = anim.GetCurrentAnimatorClipInfo(0);
+        // Debug.Log(clipInfo[0].clip);
 
-        if(playableDirector.playableAsset.name == "Get Up"){
-            chair.GetComponent<Rigidbody>().AddTorque(new Vector3(0, 0, 1));
+        // if(playableDirector.playableAsset.name == "Get Up"){
+        //     chair.GetComponent<Rigidbody>().AddTorque(new Vector3(0, 0, 1));
+        // }
+    }
+
+    private IEnumerator SmackFurniture(float waitTime){
+        yield return new WaitForSeconds(waitTime);
+        if(cycle < 1){
+            chairRb.AddTorque(new Vector3(chairForce, 0, 0));
+            chairRb.AddForce(new Vector3(chairForce*2f, 0, 0));
         }
+        if(cycle < 6){
+            tableRb.AddTorque(new Vector3(-tableForce, 0, 0));
+        }
+        cycle++;
     }
 }
