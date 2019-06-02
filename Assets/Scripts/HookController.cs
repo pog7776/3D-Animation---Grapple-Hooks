@@ -65,4 +65,8 @@ public class HookController : MonoBehaviour
             transform.position = target.position;
         }
     }
+
+    public Transform GetHook() {
+        return transform;
+    }
 }

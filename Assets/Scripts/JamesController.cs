@@ -1,39 +1,87 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
+using UnityEngine.Timeline;
 
 public class JamesController : MonoBehaviour
 {
     private Animator anim;
     Rigidbody rb;
-    CapsuleCollider bodyCollider;
-    [SerializeField] float relaxTime = 8;
+    MeshCollider bodyCollider;
+    private PlayableDirector playableDirector;
+    private TimelineAsset timelineAsset;
+    private AnimatorClipInfo[] clipInfo;
 
-    void Awake()
-    {
-        //rb =  gameObject.GetComponent<Rigidbody>();
-        //rb.detectCollisions = true;
-        //rb.useGravity = false;
-    }
+    [SerializeField] private float furnitureWait = 1.15f;
+    [SerializeField] private GameObject chair;
+    [SerializeField] private float chairForce = 50;
+    [SerializeField] private GameObject table;
+    [SerializeField] private float tableForce = 60;
+    private int cycle = 0;
+    private Rigidbody chairRb;
+    private Rigidbody tableRb;
+
+    [SerializeField] private GameObject window;
+    [SerializeField] private float windowWait = 4.15f;
+    private bool ran = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        bodyCollider = gameObject.GetComponent<CapsuleCollider>();
+        bodyCollider = gameObject.GetComponent<MeshCollider>();
         anim = gameObject.GetComponent<Animator>();
+        playableDirector = GetComponent<PlayableDirector>();
+        timelineAsset = (TimelineAsset) playableDirector.playableAsset;
+
+        chairRb = chair.GetComponent<Rigidbody>();
+        tableRb = table.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(Relax(relaxTime));
+
+        if(Input.GetButtonDown("Reset")){
+            ResetScene();
+        }
+
+        StartCoroutine(SmackFurniture(furnitureWait));
+        StartCoroutine(BreakWindow(windowWait));
+
+        
+        //Debug.Log(playableDirector.playableAsset.name);
+        //Debug.Log(anim.GetCurrentAnimatorClipInfo(0)[anim.GetCurrentAnimatorClipInfo(0).Length].clip);
+        // clipInfo = anim.GetCurrentAnimatorClipInfo(0);
+        // Debug.Log(clipInfo[0].clip);
+
+        // if(playableDirector.playableAsset.name == "Get Up"){
+        //     chair.GetComponent<Rigidbody>().AddTorque(new Vector3(0, 0, 1));
+        // }
     }
 
-    private IEnumerator Relax(float time){
-        yield return new WaitForSeconds(time);
-        bodyCollider.enabled = true;
-        anim.SetBool("relaxing", false);
-        //rb.detectCollisions = true;
-        //rb.useGravity = true;
+    private IEnumerator SmackFurniture(float waitTime){
+        yield return new WaitForSeconds(waitTime);
+        if(cycle < 1){
+            chairRb.AddTorque(new Vector3(chairForce, 0, 0));
+            chairRb.AddForce(new Vector3(chairForce*2f, 0, 0));
+        }
+        if(cycle < 6){
+            tableRb.AddTorque(new Vector3(-tableForce, 0, 0));
+        }
+        cycle++;
+    }
+
+    private IEnumerator BreakWindow(float waitTime){
+        yield return new WaitForSeconds(waitTime);
+        if(!ran){
+            window.GetComponent<Breakable>().BreakFunction();
+            ran = true;
+        }
+    }
+
+    private void ResetScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
