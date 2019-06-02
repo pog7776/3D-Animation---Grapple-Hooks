@@ -9,7 +9,7 @@ public class TriggerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "James")
+        if (other.tag == "James" || other.tag == "Hook")
         {
             switch (command)
             {
@@ -45,8 +45,17 @@ public class TriggerController : MonoBehaviour
                     james.Gravity(); break;
                 case "GravityOff":
                     james.NoGravity(); break;
+                case "PlayFirstSwing":
+                    james.PlayTimeLine(0); break;
+                case "Pause":
+                    james.PauseTimeLine(); break;
+                case "Resume":
+                    james.ResumetimeLine(); break;
+                case "Stop":
+                    james.StopTimeLine(); break;
                 default: break;
             }
+            gameObject.SetActive(false);
         }
     }
 }
