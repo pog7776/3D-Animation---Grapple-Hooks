@@ -28,4 +28,8 @@ public class GrapplingController : MonoBehaviour
     {
         transform.position = hand.position;
     }
+
+    public Transform GetHook() {
+        return hook.GetHook();
+    }
 }

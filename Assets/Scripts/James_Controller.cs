@@ -101,4 +101,16 @@ public class James_Controller : MonoBehaviour
     public void StopTimeLine() {
         pd.Stop();
     }
+
+    public Transform GetJames() {
+        return transform;
+    }
+
+    public Transform GetRightHook() {
+        return rightHook.GetHook();
+    }
+
+    public Transform GetLeftHook() {
+        return leftHook.GetHook();
+    }
 }
