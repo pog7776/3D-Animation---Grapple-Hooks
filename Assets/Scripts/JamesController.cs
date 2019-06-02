@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 using UnityEngine.Timeline;
 
 public class JamesController : MonoBehaviour
@@ -41,6 +42,11 @@ public class JamesController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(Input.GetButtonDown("Reset")){
+            ResetScene();
+        }
+
         StartCoroutine(SmackFurniture(furnitureWait));
         StartCoroutine(BreakWindow(windowWait));
 
@@ -73,5 +79,9 @@ public class JamesController : MonoBehaviour
             window.GetComponent<Breakable>().BreakFunction();
             ran = true;
         }
+    }
+
+    private void ResetScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
