@@ -1850,7 +1850,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2964,7 +2964,7 @@ GameObject:
   - component: {fileID: 408392137}
   - component: {fileID: 408392138}
   m_Layer: 0
-  m_Name: Test Camera
+  m_Name: Scene Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11015,7 +11015,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1415630592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.96, y: -4.72, z: -4.67}
+  m_LocalPosition: {x: -14.96, y: -2.91, z: -4.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1884648546}
@@ -11666,7 +11666,7 @@ GameObject:
   - component: {fileID: 1568073601}
   - component: {fileID: 1568073600}
   m_Layer: 0
-  m_Name: Test Camera (1)
+  m_Name: Test Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12617,6 +12617,48 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1811446412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 11642509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1811446417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811446412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70081bef98ab8dd459e38072395393ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _threshold: 1
+  _stretch: 0.75
+  _intensity: 0.3
+  _tint: {r: 0.72156864, g: 0.72156864, b: 1, a: 1}
+  _shader: {fileID: 4800000, guid: 10949a53e15fb4a4589953320ecc54b6, type: 3}
+--- !u!114 &1811446418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811446412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6363bba448bf64e60a763433f9ddf81b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _threshold: 0.8
+  _softKnee: 0.37
+  _radius: 1.1
+  _intensity: 0.8
+  _highQuality: 1
+  _antiFlicker: 1
+  _shader: {fileID: 4800000, guid: 5a711a01011934ebcb58ef5ad52159d6, type: 3}
 --- !u!1 &1820958938
 GameObject:
   m_ObjectHideFlags: 0
@@ -13061,7 +13103,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0, g: 0, b: 1, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
