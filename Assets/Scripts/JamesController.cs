@@ -24,6 +24,7 @@ public class JamesController : MonoBehaviour
 
     [SerializeField] private GameObject window;
     [SerializeField] private float windowWait = 4.15f;
+    private bool ran = false;
 
     // Start is called before the first frame update
     void Start()
@@ -68,6 +69,9 @@ public class JamesController : MonoBehaviour
 
     private IEnumerator BreakWindow(float waitTime){
         yield return new WaitForSeconds(waitTime);
-        window.GetComponent<Breakable>().BreakFunction();
+        if(!ran){
+            window.GetComponent<Breakable>().BreakFunction();
+            ran = true;
+        }
     }
 }
