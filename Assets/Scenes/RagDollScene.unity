@@ -1637,7 +1637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 641931380}
-  force: 200
+  force: 350
   dir: {x: 0, y: 0, z: -1}
 --- !u!54 &641931380
 Rigidbody:
