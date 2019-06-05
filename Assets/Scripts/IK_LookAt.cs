@@ -21,4 +21,8 @@ public class IK_LookAt : MonoBehaviour
             anime.SetLookAtWeight(weight);
         }
     }
+
+    public Transform GetTarget() {
+        return target;
+    }
 }

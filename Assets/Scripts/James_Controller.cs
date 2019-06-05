@@ -113,4 +113,8 @@ public class James_Controller : MonoBehaviour
     public Transform GetLeftHook() {
         return leftHook.GetHook();
     }
+
+    public Transform GetLookAt() {
+        return look.GetTarget();
+    }
 }

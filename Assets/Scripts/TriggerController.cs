@@ -28,10 +28,14 @@ public class TriggerController : MonoBehaviour
                 cc.FollowTarget(james.GetRightHook(), cPos.position); break;
             case "FollowLeftHook":
                 cc.FollowTarget(james.GetLeftHook(), cPos.position); break;
+            case "WatchLookAt":
+                cc.Watch(james.GetLookAt()); break;
             case "SetAt":
                 cc.SetAt(cPos); break;
             case "Stop":
                 cc.Stop(); break;
+            case "Block":
+                cc.Block(); break;
             default: break;
         }
     }
@@ -75,6 +79,8 @@ public class TriggerController : MonoBehaviour
                 james.PlayTimeLine(0); break;
             case "PlayBirdHit":
                 james.PlayTimeLine(1); break;
+            case "PlayRoofSwing":
+                james.PlayTimeLine(2); break;
             case "Pause":
                 james.PauseTimeLine(); break;
             case "Resume":

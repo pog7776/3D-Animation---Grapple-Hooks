@@ -14,6 +14,10 @@ public class HookController : MonoBehaviour
     public void Fire()
     {
         if (!fired) {
+            if (reeling) {
+                reeling = false;
+                StopCoroutine(ReelHook());
+            }
             fired = true;
             StartCoroutine(FireHook());
         }
@@ -29,6 +33,10 @@ public class HookController : MonoBehaviour
     public void Reel()
     {
         if (!reeling) {
+            if (fired) {
+                fired = false;
+                StopCoroutine(FireHook());
+            }
             reeling = true;
             landed = false;
             StartCoroutine(ReelHook());

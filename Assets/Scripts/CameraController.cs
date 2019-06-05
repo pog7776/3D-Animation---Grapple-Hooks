@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
 {
     public Transform target;
     public bool follow;
+    public bool look;
     public Vector3 offSet;
 
     public void SetAt(Transform t) {
@@ -33,6 +34,14 @@ public class CameraController : MonoBehaviour
         follow = false;
     }
 
+    public void Look() {
+        look = true;
+    }
+
+    public void DontLook() {
+        look = false;
+    }
+
     public void FollowTarget(Transform t, Vector3 p) {
         if (t) {
             GiveTarget(t);
@@ -54,5 +63,25 @@ public class CameraController : MonoBehaviour
     public void Stop() {
         DontFollow();
         StopCoroutine(Following());
+    }
+
+    public void Watch(Transform t) {
+        if (t) {
+            GiveTarget(t);
+            Look();
+            StartCoroutine(Watching());
+        }
+    }
+
+    IEnumerator Watching() {
+        while (look) {
+            transform.LookAt(target);
+            yield return null;
+        }
+    }
+
+    public void Block() {
+        DontLook();
+        StopCoroutine(Watching());
     }
 }
