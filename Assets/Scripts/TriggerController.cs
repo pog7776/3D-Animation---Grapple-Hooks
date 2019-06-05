@@ -81,6 +81,8 @@ public class TriggerController : MonoBehaviour
                 james.PlayTimeLine(1); break;
             case "PlayRoofSwing":
                 james.PlayTimeLine(2); break;
+            case "PlayCarCrash":
+                james.PlayTimeLine(3); break;
             case "Pause":
                 james.PauseTimeLine(); break;
             case "Resume":
