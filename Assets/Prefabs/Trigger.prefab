@@ -122,4 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   james: {fileID: 0}
-  command: FireRight
+  command: 
+  cc: {fileID: 0}
+  Ccommand: 
+  cPos: {fileID: 0}
