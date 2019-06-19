@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1441,6 +1441,41 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 4538439848798163006, guid: 28d7940ee7633604db7b8bb008eb1ee2,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 6c8f0394cb94ffd429eeac58fcb48a38, type: 2}
+    - target: {fileID: 4538439848798163007, guid: 28d7940ee7633604db7b8bb008eb1ee2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 91b0b1059be9b2f4fa5cadc31ba97035, type: 2}
+    - target: {fileID: 4538439848798163004, guid: 28d7940ee7633604db7b8bb008eb1ee2,
+        type: 3}
+      propertyPath: height
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538439848798163004, guid: 28d7940ee7633604db7b8bb008eb1ee2,
+        type: 3}
+      propertyPath: windowColor.r
+      value: 0.09803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538439848798163004, guid: 28d7940ee7633604db7b8bb008eb1ee2,
+        type: 3}
+      propertyPath: windowColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538439848798163004, guid: 28d7940ee7633604db7b8bb008eb1ee2,
+        type: 3}
+      propertyPath: windowColor.b
+      value: 0.039215688
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538439848798163005, guid: 28d7940ee7633604db7b8bb008eb1ee2,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 6c8f0394cb94ffd429eeac58fcb48a38, type: 2}
     - target: {fileID: 2601713563045762833, guid: 28d7940ee7633604db7b8bb008eb1ee2,
         type: 3}
       propertyPath: m_UseGravity
@@ -1451,26 +1486,6 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4538439848798163006, guid: 28d7940ee7633604db7b8bb008eb1ee2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: a6c041e9302673b40898f40167f2178f, type: 2}
-    - target: {fileID: 4538439848798163007, guid: 28d7940ee7633604db7b8bb008eb1ee2,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3c6021ccceae15f438a13ea69b94d3a4, type: 2}
-    - target: {fileID: 4538439848798163004, guid: 28d7940ee7633604db7b8bb008eb1ee2,
-        type: 3}
-      propertyPath: height
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4538439848798163005, guid: 28d7940ee7633604db7b8bb008eb1ee2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: a6c041e9302673b40898f40167f2178f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28d7940ee7633604db7b8bb008eb1ee2, type: 3}
 --- !u!1001 &1194250832
