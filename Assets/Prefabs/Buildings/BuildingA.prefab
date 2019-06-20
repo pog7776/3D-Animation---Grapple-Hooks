@@ -90438,7 +90438,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4538439848798163002}
-  m_Mesh: {fileID: 4300000, guid: 6b4f0e524eecf9d4d851c6df6a6e0373, type: 2}
+  m_Mesh: {fileID: 4300000, guid: 4d4a852c315b44e48bfcd5adeb31d5ec, type: 2}
 --- !u!23 &4538439848798163007
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -90456,7 +90456,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: af0e14e81a23f714b9a97e5d273db62f, type: 2}
+  - {fileID: 2100000, guid: c81b83222f3a0984ba61730fe1548b78, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90510,7 +90510,7 @@ MonoBehaviour:
   storyDividerColor: {r: 0.10196079, g: 0.10196079, b: 0.10196079, a: 1}
   cornerColor: {r: 0.10196079, g: 0.10196079, b: 0.10196079, a: 1}
   roofColor: {r: 0, g: 0, b: 0, a: 1}
-  windowColor: {r: 1, g: 1, b: 0.39215687, a: 1}
+  windowColor: {r: 1, g: 0.78431374, b: 0.3529412, a: 1}
   windowDividerColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
   highStripe: {r: 0.3, g: 0.3, b: 0.3, a: 1}
   addCollider: 1
@@ -90527,7 +90527,7 @@ MeshCollider:
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 6b4f0e524eecf9d4d851c6df6a6e0373, type: 2}
+  m_Mesh: {fileID: 4300000, guid: 4d4a852c315b44e48bfcd5adeb31d5ec, type: 2}
 --- !u!54 &2601713563045762833
 Rigidbody:
   m_ObjectHideFlags: 0
