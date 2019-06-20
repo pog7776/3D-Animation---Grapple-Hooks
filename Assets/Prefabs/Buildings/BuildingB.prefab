@@ -41,7 +41,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.39215687, a: 1}
   m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
@@ -110,7 +110,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 0
-  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.39215687, a: 1}
   m_Intensity: 1.5
   m_Range: 50
   m_SpotAngle: 100
@@ -179,7 +179,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 0
-  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.39215687, a: 1}
   m_Intensity: 1.5
   m_Range: 50
   m_SpotAngle: 100
@@ -254,7 +254,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 71215445139720071}
-  m_Mesh: {fileID: 4300000, guid: e4d5ba8690d736048a31db7b72e4deaf, type: 2}
+  m_Mesh: {fileID: 4300000, guid: 18172eb3079b1884c9e3da5246249c60, type: 2}
 --- !u!23 &71215445139720068
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -272,7 +272,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 32662aafe470bf9498ddc12303c742c5, type: 2}
+  - {fileID: 2100000, guid: b03c8b6d762ef7442a4591d9588f30fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -326,7 +326,7 @@ MonoBehaviour:
   storyDividerColor: {r: 0, g: 0, b: 0, a: 1}
   cornerColor: {r: 0, g: 0, b: 0, a: 1}
   roofColor: {r: 0, g: 0, b: 0, a: 1}
-  windowColor: {r: 1, g: 1, b: 0, a: 1}
+  windowColor: {r: 1, g: 1, b: 0.39215687, a: 1}
   windowDividerColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
   highStripe: {r: 0.3, g: 0.3, b: 0.3, a: 1}
   addCollider: 1
@@ -343,7 +343,7 @@ MeshCollider:
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: e4d5ba8690d736048a31db7b72e4deaf, type: 2}
+  m_Mesh: {fileID: 4300000, guid: 18172eb3079b1884c9e3da5246249c60, type: 2}
 --- !u!54 &4328206139194150386
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -414,7 +414,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.39215687, a: 1}
   m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
