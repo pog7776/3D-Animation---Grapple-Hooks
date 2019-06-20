@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class RagDollcontroller : MonoBehaviour
 {
-    public Rigidbody rb;
+    public Rigidbody[] rbs;
+    public Rigidbody target;
     public float force;
     public Vector3 dir;
 
@@ -12,7 +13,15 @@ public class RagDollcontroller : MonoBehaviour
     void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Space)) {
-            rb.AddForce(dir*force, ForceMode.Impulse);
+            target.AddForce(dir*force, ForceMode.Impulse);
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.tag == "Finish") {
+            for (int i = 0; i < rbs.Length; i++) {
+                rbs[i].velocity = Vector3.zero;
+            }
         }
     }
 }
