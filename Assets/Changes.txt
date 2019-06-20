@@ -1,5 +1,8 @@
 Re did camera in majority of scenes to use Cinemachine Cameras
 Add proper animations for falling and swinging
+PostProcessing added for interior and falling scene
+Animations on first swing scene
+corrected the animations to have the correct rig instead of each animation having it's own
 
 TO DO:
 Add post processing
