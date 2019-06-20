@@ -1,2 +1,9 @@
 Re did camera in majority of scenes to use Cinemachine Cameras
 Add proper animations for falling and swinging
+
+TO DO:
+Add post processing
+Add more animations
+Fix window lighting
+Add city background/skybox
+Add night sky
