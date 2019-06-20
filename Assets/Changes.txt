@@ -1,0 +1,2 @@
+Re did camera in majority of scenes to use Cinemachine Cameras
+Add proper animations for falling and swinging
