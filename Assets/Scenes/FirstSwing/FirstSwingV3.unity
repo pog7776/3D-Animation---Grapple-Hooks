@@ -2275,6 +2275,7 @@ GameObject:
   - component: {fileID: 1109100413}
   - component: {fileID: 1109100412}
   - component: {fileID: 1109100416}
+  - component: {fileID: 1109100417}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2393,6 +2394,15 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Cinemachine.CinemachineBrain+VcamEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!45 &1109100417
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109100411}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: c494c335823f54b52b2e87e1b7a63a23, type: 2}
 --- !u!95 &1298666899 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2024399475, guid: 9db5e40499107594fb4fc69a7e85f3f8,
