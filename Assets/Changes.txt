@@ -3,3 +3,6 @@ Add proper animations for falling and swinging
 Fixed window lighting
 Added city background/skybox
 Added Post Processing
+PostProcessing added for interior and falling scene
+Animations on first swing scene
+Corrected the animations to have the correct rig instead of each animation having it's own
