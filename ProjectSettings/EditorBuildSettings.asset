@@ -8,4 +8,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Interior.unity
     guid: 05e8dee4e467fc149a3267ea0a00bf58
+  - enabled: 1
+    path: Assets/Scenes/Diving.unity
+    guid: 7a665c13410266545951ceaa09e71f91
+  - enabled: 1
+    path: Assets/Scenes/FirstSwing/FirstSwingV3.unity
+    guid: 1f8cdf924e3e96e4ea2842a65de36e9c
+  - enabled: 1
+    path: Assets/Scenes/BirdHitScene/BirdHitV3.unity
+    guid: 6fbb0a232c701dc469d674c04f23bb4d
+  - enabled: 1
+    path: Assets/Scenes/RoofScene/RoofSceneV2.unity
+    guid: ede6b972656b82a4cad17111747179f4
+  - enabled: 1
+    path: Assets/Scenes/CarCrash/CarCrashV2.unity
+    guid: a6285d2dce2385b42aa43991f2a63dc0
+  - enabled: 1
+    path: Assets/Scenes/RagDoll/RagDollV2.unity
+    guid: 8901df5666752984ab01651be35b1e77
   m_configObjects: {}
