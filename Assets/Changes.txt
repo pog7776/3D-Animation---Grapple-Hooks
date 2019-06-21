@@ -6,3 +6,13 @@ Added Post Processing
 PostProcessing added for interior and falling scene
 Animations on first swing scene
 Corrected the animations to have the correct rig instead of each animation having it's own
+Animations for bird scene
+Animations for roof scene
+Animations for car scene
+Flesh out city in all scenes
+Fix interior scene character snapping back in frame after timeline ends
+"Vertigo" effect added to diving scene
+Changed window colour
+Turned off some window lights to be more realistic
+Randomized the building heights
+Removed mesh renderer on trigger boxes
